@@ -37,7 +37,12 @@ namespace Participation
             number = rand.Next(minValue, maxValue);
             
             Console.WriteLine("Now, take a guess between your minimum and your maximum. >>");
-            guess = Convert.ToInt32(Console.ReadLine());
+            string guessedNumber = Console.ReadLine();
+                if (int.TryParse(guessedNumber, out guess) != true)
+                {
+                    Console.WriteLine("Please input a valid number.");
+                    return;
+                }
             
             Console.WriteLine($"You guessed ({guess}) and the random number is ({number}).");
 
