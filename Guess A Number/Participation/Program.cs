@@ -34,7 +34,7 @@ namespace Participation
             {
 
             Random rand = new Random();
-            number = rand.Next(minValue, maxValue);
+            number = rand.Next(minValue, maxValue + 1);
             
             Console.WriteLine("Now, take a guess between your minimum and your maximum. >>");
             string guessedNumber = Console.ReadLine();
